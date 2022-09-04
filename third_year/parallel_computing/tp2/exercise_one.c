@@ -26,10 +26,18 @@ void *type_two_thread(void *vargp)
     free(vargp);
 }
 
+int get_number_of_threads(int thread_type){
+    int n;
+    printf("Enter number of Type %d threads: ", thread_type);
+    scanf("%d",&n);
+    return n;
+}
+
+
 int main(int argc, char **argv)
 {
-    int n = 5;
-    int m = 6;
+    int n = get_number_of_threads(1);
+    int m = get_number_of_threads(2);
     int i;
 
     // threads id:
